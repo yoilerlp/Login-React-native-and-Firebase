@@ -11,7 +11,7 @@ import firebase from "./firebase";
 
 const App = () => {
 
-  //Para visalizar las mutaciones al stato
+  //Para visalizar las mutaciones al estado
   useEffect(()=>{
     console.log(store.getState())
     store.subscribe(()=> console.log(store.getState()))
