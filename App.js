@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./Login";
@@ -10,6 +10,8 @@ import { PersistGate } from 'redux-persist/integration/react'
 import firebase from "./firebase";
 
 const App = () => {
+
+  //Para visalizar las mutaciones al stato
   useEffect(()=>{
     console.log(store.getState())
     store.subscribe(()=> console.log(store.getState()))
